@@ -1,0 +1,15 @@
+number = int(input("Enter the number to check: "))
+length = len(str(number))
+
+temp = number
+sum = 0
+while temp > 0:
+    digit = temp % 10 #to get the the last digit in your number
+    sum += digit ** length
+    temp //= 10 #remove the last digit
+
+
+if number == sum:
+    print("armstong number")
+else:
+    print("Not an armstong number")        
